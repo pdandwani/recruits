@@ -4,11 +4,11 @@ const submitTest = document.querySelector("#submitTest");
 
 submitTest.addEventListener("click", function () {
     alert("Hello");
-    db.collections('answers').doc().set({
-        name: 'HEllo'
+    db.collection('answers').doc().set({
+        name: 'answer eoufeofjebwofevwewfyewofw PE DATA GAYA'
     }).then(function () {
         console.log('saved');
     }).catch(function (error) {
         console.log("Error : " + error);
     })
-});
+});        

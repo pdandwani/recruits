@@ -1,10 +1,4 @@
-// // const sname = document.querySelector('#name');
-// // const email = document.querySelector('#email');
-// // const mobile = document.querySelector('#mobile');
-// // const scholar = document.querySelector('#scholar');
-// // const executive = document.querySelector('#executive');
-// // const quizmaster = document.querySelector('#quizmaster');
-// // const other = document.querySelector('#other');
+
 
 
 // var db = firebase.firestore();
@@ -42,6 +36,14 @@
 // });
 
 
+// const sname = document.querySelector('#name');
+// const email = document.querySelector('#email');
+// const mobile = document.querySelector('#mobile');
+// const scholar = document.querySelector('#scholar');
+// const executive = document.querySelector('#executive');
+// const quizmaster = document.querySelector('#quizmaster');
+// const other = document.querySelector('#other');
+
 
 
 var db = firebase.firestore();
@@ -53,13 +55,18 @@ const understood = document.querySelector('#submit');
 
 
 understood.addEventListener("click", function () {
-    var today = new Date();
-    var time = (today.getHours() * 10000) + (today.getMinutes() * 100) + today.getSeconds();
+    // var today = new Date();
+    // var time = (today.getHours() * 10000) + (today.getMinutes() * 100) + today.getSeconds();
     alert('HEllo');
-    db.collection('student').doc().set({
-        //time: time,
-        //time: time,
-        name: 'Hello',
+    db.collection('students').doc().set({
+        //name: sname.value
+        // email: email.value,
+        // mobile: mobile.value,
+        // scholarNumber: scholar.value,
+        // executive: executive.value,
+        // quizmaster: quizmaster.value,
+        // other: other.value
+        name: 'hello hii',
     })
         .then(function () {
             console.log('Saved');
