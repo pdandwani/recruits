@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Instructions - QCM</title>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container p-2 p-md-5 pt-5 d-flex flex-wrap">
+        <div class="w-100 font-weight-bold h2 text-center text-primary">INSTRUCTIONS</div>
+        <hr class="w-100 border-light" />
+        <div class="w-100 p-0 p-md-5">
+            <ol class="h5" type="1">
+                <li class="mb-2">Total time allotted to solve the paper is 30 mins.
+                </li>
+                <li class="mb-2">The total number of questions is 30.
+                </li>
+                <li class="mb-2">Questions are divided into 2 sections, Aptitude and General Knowledge. Each section has
+                    15 questions.</li>
+                <li class="mb-2">Any of the section can be attempted first, and the student can jump in between
+                    sections.</li>
+                <li class="mb-2">Each question carries 3 marks with no negative marks.</li>
+                <li class="mb-2">Some questions with ** beside them are considered a bonus question and carry 4 marks
+                    for a right answer and -1 for a wrong answer.
+                </li>
+            </ol>
+            <div class="w-100 text-right mt-5"><button class="btn btn-outline-primary"
+                    id="understood">UNDERSTOOD</button></div>
+        </div>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <script type="text/javascript" src="../javascript/addToTime.js"></script>
+    </div>
+</body>
+
+</html>

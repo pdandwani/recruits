@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Test - QCM</title>
+</head>
+
+<body class="bg-dark text-white test">
+    <div class="container p-2 p-md-5 pt-5 d-flex flex-wrap justify-content-center">
+        <div class="w-100 d-flex justify-content-around align-items-center">
+            <img src="../assets/qcm.png" alt="" class="col-6 col-md-2 ">
+            <span id="time" class="h1 col-6 col-md-2 text-center">30:00</span>
+        </div>
+        <hr class="w-100 border-light" />
+
+        <div class="w-100 pt-5">
+            <div class="bs-example">
+                <ul class="nav nav-tabs font-weight-bold">
+                    <li class="nav-item w-50 text-center">
+                        <a href="#apti" class="nav-link active" data-toggle="tab">Aptitude</a>
+                    </li>
+                    <li class="nav-item w-50 text-center">
+                        <a href="#gk" class="nav-link" data-toggle="tab">General Knowledge</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="apti">
+                        <ol type="1">
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="1"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="2"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="3"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="4"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="5"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="6"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="7"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="8"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="9"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+
+                                <input type="radio" id="10.1" class="option" name="optionq10" value="10.1" />
+                                Option 1<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="10.2" class="option" name="optionq10" value="10.2" />
+                                Option 2<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="10.3" class="option" name="optionq10" value="10.3" />
+                                Option 3<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="10.4" class="option" name="optionq10" value="10.4" />
+                                Option 4<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="11"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="12"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="13"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="14"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">There are T taps numbered 1,2 and so on till T, each of which can
+                                fill
+                                a
+                                cistern. The
+                                rate of filling of the n-th tap is such that it is equal to twice that of all the taps
+                                from 1 to n-1 put together. If the 18th tap can fill the empty cistern in 2minutes, then
+                                find the time in which the 15th tap alone can fill the cistern.<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="15"
+                                    placeholder="Your answer here...">
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade " id="gk">
+                        <ol type="1">
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="16"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The first Arab space mission dubbed as ‘HOPE Probe’ was launched by United Arab Emirate
+                                (UAE) from which of the following countries?<br /><br />
+                                <input type="radio" id="17.1" class="option" name="optionq10" value="17.1" />
+                                South Korea<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="17.2" class="option" name="optionq10" value="17.2" />
+                                China<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="17.3" class="option" name="optionq10" value="17.3" />
+                                Japan<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="17.4" class="option" name="optionq10" value="17.4" />
+                                Israel<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Which country has registered the first COVID-19 vaccine?<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="18" placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Who is an Indian origin lady, nominated as U.S Vice President
+                                Candidate<br /><br /><input type="text" class="form-control col-12 col-md-4" id="19"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Who has been the longest-serving CM of any state in India?<br /><br />
+                                <input type="radio" id="20.1" class="option" name="optionq10" value="20.1" />
+                                Jyoti Basu<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="20.2" class="option" name="optionq10" value="20.2" />
+                                Pawan Kumar Chamling<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="20.3" class="option" name="optionq10" value="20.3" />
+                                Lal Thanhawa<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="20.4" class="option" name="optionq10" value="20.4" />
+                                Geopang Apang<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Recently, a catastrophic blast occurred at the Lebanon capital, Beirut. It was driven by
+                                tonnes of<br /><br /><input type="text" class="form-control col-12 col-md-4" id="21"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Who laid the foundation stone of MANIT Bhopal ( Then REC-Bhopal )<br /><br />
+                                <input type="radio" id="22.1" class="option" name="optionq10" value="22.1" />
+                                Dr.Rajendra Prasad<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="22.2" class="option" name="optionq10" value="22.2" />
+                                Maulana Abul KAlam Azad<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="22.3" class="option" name="optionq10" value="22.3" />
+                                Sarvepalli Radhakrishnan<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="22.4" class="option" name="optionq10" value="22.4" />
+                                Pt Jawaharlal Nehru<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Which of the following countries is considering minting a coin to remember Mahatma
+                                Gandhi?<br /><br />
+                                <input type="radio" id="23.1" class="option" name="optionq10" value="23.1" />
+                                Great Britain<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="23.2" class="option" name="optionq10" value="23.2" />
+                                France<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="23.3" class="option" name="optionq10" value="23.3" />
+                                Germany<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="23.4" class="option" name="optionq10" value="23.4" />
+                                India<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="24"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="25"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="26"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="27"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="28"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="29"
+                                    placeholder="Your answer here...">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named after<br /><br /><input type="text" class="form-control col-12 col-md-4" id="30"
+                                    placeholder="Your answer here...">
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <hr class="w-100 border-light" />
+        <div class="w-100 text-center mt-5"><button class="btn btn-outline-primary" id="submitTest">SUBMIT</button>
+        </div>
+    </div>
+
+    <script>
+
+        function uncheck() {
+
+            var options = document.getElementsByClassName("option");
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].checked) options[i].checked = false;
+            }
+
+        };
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fiveMinutes = 60 * 5,
+                display = document.querySelector('#time');
+            startTimer(fiveMinutes, display);
+        };</script>
+
+
+    <script type="text/javascript" src="../javascript/index.js"></script>
+    <script type="text/javascript" src="../javascript/addToAnswers.js"></script>
+</body>
+
+</html>
