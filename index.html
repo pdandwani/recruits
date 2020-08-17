@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Register - QCM</title>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="row p-2 m-0 d-flex justify-content-center align-items-center registerForm">
+        <form class="col-10 col-md-4 border border-primary pt-4 pb-4 pl-3 pr-3 text-center rounded needs-validation"
+            novalidate>
+            <div class="text-primary font-weight-bold">Please fill the details...</div>
+            <div class="form-group text-left font-weight-bold">
+                <label for="name">Full Name <span class="text-danger">*</span></label>
+                <input type="name" class="form-control" id="name" placeholder="Enter your full name" required>
+
+            </div>
+            <div class="form-group text-left font-weight-bold">
+                <label for="email">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+
+            </div>
+            <div class="form-group text-left font-weight-bold">
+                <label for="mobileNumber">Mobile Number <span class="text-danger">*</span></label>
+                <input type="phone" class="form-control" id="mobile" placeholder="Enter your phone number" required
+                    minlength="10" maxlength="10">
+
+            </div>
+            <div class="form-group text-left font-weight-bold">
+                <label for="scholarNumber">Scholar Number <span class="text-danger">*</span></label>
+                <input type="id" class="form-control" id="scholar" placeholder="Enter your scholar number" required
+                    minlength="9" maxlength="9">
+
+            </div>
+            <div class="form-group text-left font-weight-bold">
+                <label for="branch" required>Post</label>
+                <div class="radio">
+                    <label><input type="radio" name="executive" id="executive"> Executive </label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="quizmaster" id="quizmaster">Quiz Master</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="other" id="other">Other</label>
+                </div>
+            </div>
+
+            <button class="btn btn-outline-primary" id="submit" type="submit">Submit</button>
+        </form>
+        <script>
+
+        </script>
+        <script type="text/javascript" src="./javascript/index.js"></script>
+        <script type="text/javascript" src="./javascript/addToStudents.js"></script>
+    </div>
+
+</body>
+
+</html>
