@@ -111,17 +111,60 @@ var a30d = document.querySelector('#a30-4');
 
 
 
-alert(a26.value);
+//alert(a26.value);
 const queryString = window.location.search;
 
 const urlParams = new URLSearchParams(queryString);
-
+//const urlParams2 = new URLSearchParams(queryString);
 const sno = urlParams.get('s');
+const startTime = urlParams.get('t');
+alert(startTime);
+var startHour = Math.floor(startTime / 10000);
+var min = startTime % 10000;
 
-submitTest.addEventListener("click", function () {
-    alert("hello");
-    add();
-});
+const startMin = Math.floor(min / 100);
+var sec = min %= 100;
+const startSec = sec;
+
+min = startMin + 30;
+
+var endMin = min > 60 ? min - 60 : min;
+
+var hour = startHour;
+var endHour = endMin < startMin ? hour + 1 : hour;
+
+const endSec = startSec;
+//alert(endHour + endMin + endSec);
+var countDownDate = new Date("Aug 17 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
+alert(countDownDate);
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = minutes + "m : " + seconds + "s";
+    if (minutes === 0 && seconds === 0) {
+        submitFinally();
+    }
+    // If the count down is over, write some text 
+}, 1000);
+
+async function submitFinally() {
+    alert("Submitted Successfully...");
+    await add();
+
+};
 
 
 async function add() {
@@ -203,4 +246,5 @@ async function add() {
     }).catch(function (error) {
         console.log("Error : " + error);
     })
+    window.location = "../pages/end.html";
 }
