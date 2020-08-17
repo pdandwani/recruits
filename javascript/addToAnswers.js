@@ -118,7 +118,7 @@ const urlParams = new URLSearchParams(queryString);
 //const urlParams2 = new URLSearchParams(queryString);
 const sno = urlParams.get('s');
 const startTime = urlParams.get('t');
-alert(startTime);
+//alert(startTime);
 var startHour = Math.floor(startTime / 10000);
 var min = startTime % 10000;
 
@@ -136,7 +136,7 @@ var endHour = endMin < startMin ? hour + 1 : hour;
 const endSec = startSec;
 //alert(endHour + endMin + endSec);
 var countDownDate = new Date("Aug 17 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
-alert(countDownDate);
+//alert(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function () {
 
