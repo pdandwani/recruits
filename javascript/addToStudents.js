@@ -120,6 +120,6 @@ async function add() {
         }).catch(function (error) {
             console.log('Error : ', error);
         });
-    var link = "../pages/instructions.html?q=" + scholar.value;
+    var link = "pages/instructions.html?q=" + scholar.value;
     window.location = link;
 }
