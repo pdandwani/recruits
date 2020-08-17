@@ -21,7 +21,7 @@ async function add() {
             console.log('Error : ', error);
         });
 
-    var link = "../test.html?t=" + time + "&s=" + sno;
+    var link = "../pages/test.html?t=" + time + "&s=" + sno;
     window.location = link;
 }
 
