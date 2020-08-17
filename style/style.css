@@ -10,3 +10,9 @@
 -o-user-select: none;
 user-select: none;
 }
+
+@media print {
+    html, body {
+       display: none;  /* hide whole page */
+    }
+}

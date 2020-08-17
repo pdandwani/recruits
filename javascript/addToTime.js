@@ -1,18 +1,17 @@
 
-
-
-
 var db = firebase.firestore();
 
 const understood = document.querySelector('#understood');
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const sno = urlParams.get('q');
 
-// var today = new Date();
-// var time = (today.getHours() * 10000) + (today.getMinutes() * 100) + today.getSeconds();
-understood.addEventListener("click", function () {
+//alert(sno);
+async function add() {
     var today = new Date();
     var time = (today.getHours() * 10000) + (today.getMinutes() * 100) + today.getSeconds();
-    alert(time);
-    db.collection('time').doc().set({
+    //alert(sno);
+    await db.collection('time').doc(sno).set({
         //time: time,
         time: time,
     })
@@ -22,5 +21,12 @@ understood.addEventListener("click", function () {
             console.log('Error : ', error);
         });
 
-    location.replace("http://127.0.0.1:5500/pages/test.html");
+    var link = "http://127.0.0.1:5500/pages/test.html?t=" + time + "&s=" + sno;
+    window.location = link;
+}
+
+understood.addEventListener("click", function () {
+
+
+    add();
 });
