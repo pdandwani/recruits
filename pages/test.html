@@ -18,13 +18,16 @@
         //     window.history.forward();
         // } 
 
-        function disableBackButton() {
-            window.history.forward();
-        }
-        setTimeout("disableBackButton()", 0);
-        $(document).ready(function () {
-            disableBackButton();
-        });
+        // function disableBackButton() {
+        //     window.history.forward();
+        // }
+        // setTimeout("disableBackButton()", 0);
+        // $(document).ready(function () {
+        //     disableBackButton();
+        // });
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
 
     </script>
     <title>Test - QCM</title>
