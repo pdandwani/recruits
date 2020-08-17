@@ -21,7 +21,7 @@ async function add() {
             console.log('Error : ', error);
         });
 
-    var link = "http://127.0.0.1:5500/pages/test.html?t=" + time + "&s=" + sno;
+    var link = "../test.html?t=" + time + "&s=" + sno;
     window.location = link;
 }
 
