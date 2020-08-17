@@ -247,4 +247,5 @@ async function add() {
         console.log("Error : " + error);
     })
     window.location = "../pages/end.html";
+
 }

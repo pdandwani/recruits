@@ -13,10 +13,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
     <link rel="stylesheet" href="../style/style.css">
     <script type="text/javascript">
-        window.history.forward();
-        function noBack() {
+        // window.history.forward();
+        // function noBack() {
+        //     window.history.forward();
+        // } 
+
+        function disableBackButton() {
             window.history.forward();
-        } 
+        }
+        setTimeout("disableBackButton()", 0);
+        $(document).ready(function () {
+            disableBackButton();
+        });
+
     </script>
     <title>Test - QCM</title>
 </head>
