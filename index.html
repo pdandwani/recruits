@@ -16,8 +16,11 @@
 
 <body class="bg-dark text-white">
     <div class="row p-2 m-0 d-flex justify-content-center align-items-center registerForm">
+        <div id="notice" class="w-100 p-5 h1 text-center">
+            Please visit the site in alloted slot...
+        </div>
         <form class="col-10 col-md-4 border border-primary pt-4 pb-4 pl-3 pr-3 text-center rounded needs-validation"
-            novalidate>
+            id="early" novalidate>
             <div class="text-primary font-weight-bold">Please fill the details...</div>
             <div class="form-group text-left font-weight-bold">
                 <label for="name">Full Name <span class="text-danger">*</span></label>
@@ -57,7 +60,19 @@
             <button class="btn btn-outline-primary" id="submit" type="submit">Submit</button>
         </form>
         <script>
+            let currentDate = new Date();
+            let early = document.getElementById("early");
+            let notice = document.getElementById("notice");
+            //alert(currentDate.getDate());
+            if (currentDate.getHours() == 16 || currentDate.getHours() == 19) {
 
+                early.style.display = "block";
+                notice.style.display = "none"
+            }
+            else {
+                early.style.display = "none";
+                notice.style.display = "block"
+            }
         </script>
         <script type="text/javascript" src="./javascript/index.js"></script>
         <script type="text/javascript" src="./javascript/addToStudents.js"></script>

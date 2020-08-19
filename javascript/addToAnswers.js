@@ -117,7 +117,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 //const urlParams2 = new URLSearchParams(queryString);
 const sno = urlParams.get('s');
-const startTime = urlParams.get('t');
+const startTime = atob(urlParams.get('t'));
 //alert(startTime);
 var startHour = Math.floor(startTime / 10000);
 var min = startTime % 10000;
@@ -126,7 +126,7 @@ const startMin = Math.floor(min / 100);
 var sec = min %= 100;
 const startSec = sec;
 
-min = startMin + 30;
+min = startMin + 25;
 
 var endMin = min > 60 ? min - 60 : min;
 
@@ -135,7 +135,7 @@ var endHour = endMin < startMin ? hour + 1 : hour;
 
 const endSec = startSec;
 //alert(endHour + endMin + endSec);
-var countDownDate = new Date("Aug 18 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
+var countDownDate = new Date("Aug 19 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
 //alert(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function () {
