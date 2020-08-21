@@ -135,7 +135,9 @@ var endHour = endMin < startMin ? hour + 1 : hour;
 
 const endSec = startSec;
 //alert(endHour + endMin + endSec);
-var countDownDate = new Date("Aug 20 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
+var date_today = now.getDate();
+//alert(date_today);
+var countDownDate = new Date("Aug " + date_today + " 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
 //alert(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function () {
