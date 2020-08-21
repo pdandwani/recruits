@@ -117,7 +117,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 //const urlParams2 = new URLSearchParams(queryString);
 const sno = urlParams.get('s');
-const startTime = atob(urlParams.get('t'));
+const startTime = (urlParams.get('t'));
 alert(startTime);
 var startHour = Math.floor(startTime / 10000);
 var min = startTime % 10000;
