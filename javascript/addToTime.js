@@ -22,6 +22,7 @@ async function add() {
         });
 
     var link = "../pages/test.html?t=" + btoa(time) + "&s=" + sno;
+    //alert(time);
     window.location = link;
 }
 
