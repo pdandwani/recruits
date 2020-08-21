@@ -118,7 +118,7 @@ const urlParams = new URLSearchParams(queryString);
 //const urlParams2 = new URLSearchParams(queryString);
 const sno = urlParams.get('s');
 const startTime = atob(urlParams.get('t'));
-alert(startTime);
+//alert(startTime);
 var startHour = Math.floor(startTime / 10000);
 var min = startTime % 10000;
 
@@ -135,9 +135,9 @@ var endHour = endMin < startMin ? hour + 1 : hour;
 
 const endSec = startSec;
 //alert(endHour + endMin + endSec);
-//var now_now = new Date();
-//var date_today_curr = now_now.getDate();
-//alert(date_today_curr);
+var now_now = new Date();
+var date_today_curr = now_now.getDate();
+alert(date_today_curr);
 // + date_today +
 var countDownDate = new Date("Aug 22 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
 //alert(countDownDate);
