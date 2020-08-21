@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+
+        // function disableBackButton() {
+        //     window.history.forward();
+        // }
+        // setTimeout("disableBackButton()", 0);
+        // $(document).ready(function () {
+        //     disableBackButton();
+        // });
+        // function preventBack() { window.history.forward(); }
+        // setTimeout("preventBack()", 0);
+        // window.onunload = function () { null };
+
+    </script>
+    <title>Test - QCM</title>
+</head>
+
+<body class="bg-dark text-white test">
+    <div class="container p-2 p-md-5 pt-5 d-flex flex-wrap justify-content-center">
+        <div class="w-100 d-flex justify-content-around align-items-center">
+            <img src="../assets/qcm.png" alt="" class="col-6 col-md-2 ">
+            <span class="h1 col-6 col-md-3 text-center">
+                <p id="demo" class=""></p>
+            </span>
+        </div>
+        <hr class="w-100 border-light" />
+
+        <div class="w-100 pt-5">
+            <div class="bs-example">
+                <ul class="nav nav-tabs font-weight-bold">
+                    <li class="nav-item w-50 text-center">
+                        <a href="#apti" class="nav-link active" data-toggle="tab">Aptitude</a>
+                    </li>
+                    <li class="nav-item w-50 text-center">
+                        <a href="#gk" class="nav-link" data-toggle="tab">General Knowledge</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="apti">
+                        <ol type="1">
+                            <li class="mt-3 pr-3 pr-3">Two numbers are in the ratio 2: 7. If each is increased by 12
+                                then the ratio of the resulting first
+                                and the second numbers would be 1:3, the second number<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a1"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">A and B can do a piece of work in 40 days and 30 days
+                                respectively. They together started the
+                                work but A left 2 days before the completion of the work. In how many days will the
+                                entire work
+                                be completed?<br /><br />
+                                <input type="radio" id="a2-1" class="option" name="optionq2" value="2.1" />
+                                16<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a2-2" class="option" name="optionq2" value="2.2" />
+                                17<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a2-3" class="option" name="optionq2" value="2.3" />
+                                18<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a2-4" class="option" name="optionq2" value="2.4" />
+                                15<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">A solution of 80 litres contains 30% alcohol.. How many litres of
+                                pure alcohol must be added to
+                                this mixture so that the concentration of alcohol becomes 65%?<br /><br />
+                                <input type="radio" id="a3-1" class="option" name="optionq3" value="3.1" />
+                                40<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a3-2" class="option" name="optionq3" value="3.2" />
+                                80<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a3-3" class="option" name="optionq3" value="3.3" />
+                                24<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a3-4" class="option" name="optionq3" value="3.4" />
+                                12<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">In a hostel, there are 64 men. They have provisions for 18 days.
+                                After 6 days, some men leave
+                                and the remaining provisions lasted for 16 days. How many men have left the
+                                hostel?<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a4"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">**In the sequence 1,2,2,4,4,4,4,8,8 ,8, 8,8,8,8,8….. where n
+                                consecutive terms have the value n
+                                , the 1025th term is<br /><br />
+                                <input type="radio" id="a5-1" class="option" name="optionq5" value="5.1" />
+                                511<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a5-2" class="option" name="optionq5" value="5.2" />
+                                512<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a5-3" class="option" name="optionq5" value="5.3" />
+                                1024<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a5-4" class="option" name="optionq5" value="5.4" />
+                                1025<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+
+                            <li class="mt-3 pr-3 pr-3">Ramesh is thrice as old as Suresh. Two years hence Ramesh will be
+                                twice as old as Suresh
+                                Find Ramesh's present age (in years).<br /><br />
+                                <input type="radio" id="a6-1" class="option" name="optionq6" value="6.1" />
+                                2<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a6-2" class="option" name="optionq6" value="6.2" />
+                                3<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a6-3" class="option" name="optionq6" value="6.3" />
+                                4<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a6-4" class="option" name="optionq6" value="6.4" />
+                                6<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">A number, when divided by 891, leaves a remainder of 57. What is
+                                the remainder when the
+                                same number is divided by 27?<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a7"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">84¹²³+ 16¹²³is divisible by<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a8"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">How many distinct prime factors does (22(3) (555)(7")
+                                have?<br /><br />
+
+                                <input type="text" class="form-control col-12 col-md-4" id="a9"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">A woman Manpreet asks a man Harpreet, “You the brother of my
+                                uncle's daughter. How are you
+                                related to me?". What was the man's answer?<br /><br />
+                                <input type="radio" id="a10-1" class="option" name="optionq10" value="10.1" />
+                                Cousin<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a10-2" class="option" name="optionq10" value="10.2" />
+                                Son<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a10-3" class="option" name="optionq10" value="10.3" />
+                                Brother-in-law<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a10-4" class="option" name="optionq10" value="10.4" />
+                                Nephew<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">1,1,5,49 ,11, 169, 19,?
+                                <input type="radio" id="a11-1" class="option" name="optionq11" value="11.1" />
+                                289<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a11-2" class="option" name="optionq11" value="11.2" />
+                                361<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a11-3" class="option" name="optionq11" value="11.3" />
+                                256<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a11-4" class="option" name="optionq11" value="11.4" />
+                                324<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">**Express your JEE Main Rank in the form of X^Y + Y^X
+                                ( use ^ to denote power)<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a12"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">This question contains 6 statements followed by four options of
+                                combinations of any 3 of the
+                                given sentences .Choose the option in which the combinations are logically related.
+                                (A) Some irons are made of steel
+                                (B) All steel is made of copper.
+                                (C) All copper is used for making irons
+                                (D) Some steel is copper.
+                                (E) Some irons are used for steel.
+                                (F) Some copper is used for steel.<br /><br />
+                                <input type="radio" id="a13-1" class="option" name="optionq13" value="13.1" />
+                                ABC<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a13-2" class="option" name="optionq13" value="13.2" />
+                                CDA<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a13-3" class="option" name="optionq13" value="13.3" />
+                                CEF<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a13-4" class="option" name="optionq13" value="13.4" />
+                                ABE<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">In a leap year, what is the probability that the year has 53
+                                Mondays and 53 Tuesdays?<br /><br />
+                                <input type="radio" id="a14-1" class="option" name="optionq14" value="14.1" />
+                                2/7<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a14-2" class="option" name="optionq14" value="14.2" />
+                                1/7<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a14-3" class="option" name="optionq14" value="14.3" />
+                                3/7<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a14-4" class="option" name="optionq14" value="14.4" />
+                                4/7<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3 pr-3">The geometric mean of 4, 4^2 ,4^3 ,4^4 ,. . . . 4^9
+                                is<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a15"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade " id="gk">
+                        <ol type="1">
+                            <li class="mt-3 pr-3">
+                                SpaceX has successfully launched the first military satellite “ANASIS-II” of which
+                                country?<br /><br /><input type="text" class="form-control col-12 col-md-4" id="a16"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                In which city of China, first Coronvirus case was found?<br /><br />
+                                <input type="text" class="form-control col-12 col-md-4" id="a17"
+                                    placeholder="Your answer here..." value="">
+
+                            </li>
+                            <li class="mt-3 pr-3">
+                                India’s first Snow Leopard Conservation centre is opened in<br /><br /><input
+                                    type="text" class="form-control col-12 col-md-4" id="a18"
+                                    placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                The first Arab space mission dubbed as ‘HOPE Probe’ was launched by United Arab Emirate
+                                (UAE) from which of the following countries?<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="a19" placeholder="Your answer here..."
+                                    value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Grand Central Terminal, Park Avenue, New York is the world's<br /><br />
+                                <input type="radio" id="a20-1" class="option" name="optionq20" value="20.1" />
+                                largest railway station<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a20-2" class="option" name="optionq20" value="20.2" />
+                                highest railway station<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a20-3" class="option" name="optionq20" value="20.3" />
+                                longest railway stations<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a20-4" class="option" name="optionq20" value="20.4" />
+                                None of the above<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+
+                            <li class="mt-3 pr-3">
+                                The Aerospace Startup Skyroot Aerospace has test-fired an upper stage rocket engine
+                                named
+                                after<br /><br />
+                                <input type="radio" id="a21-1" class="option" name="optionq21" value="21.1" />
+                                C.V.Raman<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a21-2" class="option" name="optionq21" value="21.2" />
+                                Abdul Kalam<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a21-3" class="option" name="optionq21" value="21.3" />
+                                Aryabhatta<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a21-4" class="option" name="optionq21" value="21.4" />
+                                Homi J.Baba<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+
+                            <li class="mt-3 pr-3">
+                                Most Man of the Match awards in IPL is won by<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="a22" placeholder="Your answer here..."
+                                    value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Economic goods are<br /><br />
+                                <input type="radio" id="a23-1" class="option" name="optionq23" value="23.1" />
+                                All commodities that are limited in quantity as compared to their demand<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a23-2" class="option" name="optionq23" value="23.2" />
+                                Commodities that is available according to their demand<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a23-3" class="option" name="optionq23" value="23.3" />
+                                Commodities that is available more as compared to demand<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a23-4" class="option" name="optionq23" value="23.4" />
+                                None of the above<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                For which of the following disciplines is Nobel Prize awarded?<br /><br />
+                                <input type="radio" id="a24-1" class="option" name="optionq24" value="24.1" />
+                                Physics and Chemistry<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a24-2" class="option" name="optionq24" value="24.2" />
+                                Physiology or Medicine<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a24-3" class="option" name="optionq24" value="24.3" />
+                                Literature, Peace and Economics<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a24-4" class="option" name="optionq24" value="24.4" />
+                                All of the above<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                India’s Largest Mosque is situated in<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="a25" placeholder="Your answer here..."
+                                    value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                **X is an Indian actor, singer, and television host. Known for his portrayals of
+                                ordinary men often
+                                battling social norms. X won a season of Roadies and also appeared in Forbes India's
+                                Celebrity
+                                100 list of 2013 and 2019.<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="a26" placeholder="Your answer here..."
+                                    value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                **X is a famous personality who is the youngest to receive Ashoka Chakra for saving
+                                lives.
+                                Daughter of a journalist, she graduated from St. Xavier's College bombay. She started
+                                her
+                                career as a model but eventually become a Y.
+                                Identify X and Y.<br /><br /><input type="text" class="form-control col-12 col-md-4"
+                                    id="a27" placeholder="Your answer here..." value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Who won the British Grand Prix (GP) 2020?<br /><br /><input type="text"
+                                    class="form-control col-12 col-md-4" id="a28" placeholder="Your answer here..."
+                                    value="">
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Who has been appointed as the next Managing Director(MD) and Chief Executive
+                                Officer(CEO) of HDFC Bank for a period of 3 years?<br /><br />
+                                <input type="radio" id="a29-1" class="option" name="optionq29" value="29.1" />
+                                Sashidhar Jagdishan<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a29-2" class="option" name="optionq29" value="29.2" />
+                                Varun Shridhar<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a29-3" class="option" name="optionq29" value="29.3" />
+                                PC Kandpal<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a29-4" class="option" name="optionq29" value="29.4" />
+                                Partha Pratim Sengupta<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                            <li class="mt-3 pr-3">
+                                Tripitakas are sacred books of<br /><br />
+                                <input type="radio" id="a30-1" class="option" name="optionq30" value="30.1" />
+                                Buddhists<br />
+                                <!-- <label for="option1">option 1</label><br> -->
+                                <input type="radio" id="a30-2" class="option" name="optionq30" value="30.2" />
+                                Hindus<br />
+                                <!-- <label for="option2">option 2</label><br> -->
+                                <input type="radio" id="a30-3" class="option" name="optionq30" value="30.3" />
+                                Jains<br />
+                                <!-- <label for="option3">option 3</label><br> -->
+                                <input type="radio" id="a30-4" class="option" name="optionq30" value="30.4" />
+                                None of the above<br />
+                                <!-- <label for="option4">option 4</label><br> -->
+                                <button class="btn btn-outline-primary" onclick=uncheck()>uncheck</button>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <hr class="w-100 border-light" />
+        <div class="w-100 text-center mt-5"><button class="btn btn-outline-primary" id="submitTest"
+                onclick=submitFinally()>SUBMIT</button>
+        </div>
+    </div>
+
+    <!-- <script>
+
+        
+
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        //var today = new Date();
+        //var time = (today.getHours() * 10000) + (today.getMinutes() * 100) + today.getSeconds();
+
+        const startTime = urlParams.get('t');
+
+        var startHour = Math.floor(startTime / 10000);
+        var min = startTime % 10000;
+
+        const startMin = Math.floor(min / 100);
+        var sec = min %= 100;
+        const startSec = sec;
+
+        min = startMin + 30;
+
+        var endMin = min > 60 ? min - 60 : min;
+
+        var hour = startHour;
+        var endHour = endMin < startMin ? hour + 1 : hour;
+
+        const endSec = startSec;
+
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        //setInterval(setTime, 1000);
+
+        // function setTime() {
+        //     // ++totalSeconds;
+        //     secondsLabel.innerHTML = pad(totalSeconds % 60);
+        //     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+        // }
+
+        // function pad(val) {
+
+        // }
+
+        //alert(endHour + ':' + endMin + ':' + endSec);
+
+
+        // var countdown = 30*60;
+        // var timer=setInterval(function(){
+        //     countdown=countdown-1;
+        //     var min=
+        // },1000);
+
+
+        // const hour = t / 10000;
+        // t = t % 10000;
+        // const min = t / 100;
+        // t = t % 100;
+        // const sec = t;
+        // const minf = min + 30;
+
+        // function startTimer(duration, display) {
+        //     var timer = duration, minutes, seconds;
+        //     setInterval(function () {
+        //         minutes = parseInt(timer / 60, 10);
+        //         seconds = parseInt(timer % 60, 10);
+
+        //         minutes = minutes < 10 ? "0" + minutes : minutes;
+        //         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        //         display.textContent = minutes + ":" + seconds;
+
+        //         if (--timer < 0) {
+        //             timer = duration;
+        //         }
+        //     }, 1000);
+        // }
+
+        // window.onload = function () {
+        //     var mins = 60 * 30,
+        //         display = document.querySelector('#time');
+        //     startTimer(mins, display);
+        //};
+    </script> -->
+
+    <script>
+        function uncheck() {
+            var options = document.getElementsByClassName("option");
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].checked) options[i].checked = false;
+            }
+        };
+
+
+
+        // const queryString = window.location.search;
+        // //alert(queryString);
+        // const urlParams = new URLSearchParams(queryString);
+
+    </script>
+    <script type="text/javascript" src="../javascript/index.js"></script>
+    <script type="text/javascript" src="../javascript/addToAnswers.js"></script>
+</body>
+
+</html>
