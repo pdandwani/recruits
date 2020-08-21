@@ -140,7 +140,7 @@ var date_today_curr = now_now.getDate();
 //alert(date_today_curr);
 // + date_today +
 var countDownDate = new Date("Aug "+date_today_curr+" 20 " + endHour + ":" + endMin + ":" + endSec).getTime();
-alert(countDownDate);
+//alert(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function () {
 
