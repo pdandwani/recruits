@@ -21,7 +21,7 @@ async function add() {
             console.log('Error : ', error);
         });
 
-    var link = "../pages/test.html?t=" + btoa(time) + "&s=" + sno;
+    var link = "../pages/test_2.html?t=" + btoa(time) + "&s=" + sno;
     //alert(time);
     window.location = link;
 }
